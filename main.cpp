@@ -15,16 +15,14 @@ video: Chapter 2 - Part 3
  
  
  1) Write down the names of the 6 major primitive types available in C++  here:
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+
+ int 
+ double
+ float
+ void
+ char
+ bool
+
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
     a) give each variable declaration an initial value
         - just ignore wchar_t. you do not need to declare 3 variables of type 'wchar_t'
@@ -60,9 +58,15 @@ void variableDeclarations()
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
     
-
-    
+ int a = 3, b = 4, c = 5; 
+ double xx = 2.0, yy = 4.5, zz = 3.23;
+ float  diam = 3.2f,  radius = 2.4f, lenght = 3.9f;
+ char red = 'B', green = 'G', blue = 'B';
+ bool isRed = true, isNoRed= false, noColor=false;
+   
     ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+
+    ignoreUnused(a,b,c,xx,yy,zz,diam,radius,lenght,red,green,blue,isRed,isNoRed,noColor);
 }
 
 /*
@@ -79,43 +83,91 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-
+int calculateVolume(int lenght =30, int wide = 20)
+{
+        ignoreUnused(lenght, wide); 
+        int vol = 0;
+        vol = lenght * wide * wide;
+        return{vol};
+}
 /*
  2)
  */
+bool chooseInstrument(int playTime , int instrumentType = 0 )
+{
+            ignoreUnused(playTime, instrumentType);
+            return{};
+}
 
 /*
  3)
  */
-
+float getTempo(float rhythym = 3.2f, int bars = 4)
+{
+    ignoreUnused(rhythym, bars);
+    return{rhythym * bars};
+}
 /*
  4)
  */
+double calcTemperature(int type = 0, double degrees =36.0)
+{
+    ignoreUnused(type, degrees);
+    return{};
+}
 
 /*
  5)
  */
-
+bool solutionDone(double result = 0, int type = 1)
+{
+    ignoreUnused(result,type);
+    return{};
+}
 /*
  6)
  */
-
+double getAmplification(double initialValue=1, double finalValue=100)
+{
+    ignoreUnused(initialValue, finalValue);
+    return{finalValue/initialValue};
+}
 /*
  7)
  */
+int getNumberCables(int sources, int outputs= 30)
+{
+    ignoreUnused(sources, outputs);
+    int cables = 0;
+    cables = (outputs - sources)*2;
+    return {cables};
+}
 
 /*
  8)
  */
-
+double setInitialGain(double noiseLevel, double intensity)
+{
+    ignoreUnused(noiseLevel,intensity);
+    return{noiseLevel*intensity};
+}
 /*
  9)
  */
-
+float calculateDistance(float initialPoint, float finalPoint)
+{
+    ignoreUnused(initialPoint, finalPoint);
+    return{finalPoint-initialPoint};
+}
 /*
  10)
  */
-
+bool checkConsole(double voltage, double signal)
+{
+    ignoreUnused(voltage,signal);
+    bool a = false;
+    return{a};
+}
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -136,26 +188,35 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto volume = calculateVolume(30);
+
     //2)
-    
+    auto instrument = chooseInstrument(300, 2);
+
     //3)
-    
+    auto tempo = getTempo();
+
     //4)
-    
+    auto calcTemperature();
+
     //5)
-    
+    auto solution = solutionDone(1,2);
+
     //6)
-    
+    auto ampl = getAmplification(3.2, 103.5);
+
     //7)
-    
+    auto cables = getNumberCables(10, 20);
+
     //8)
-    
+    auto gain = setInitialGain(300, 400.3);
+
     //9)
-    
+    auto distance = calculateDistance(300.3f, 300.4f);
+
     //10)
-    
-    
+    auto console = checkConsole(5.5, 3.3);
+
     ignoreUnused(carRented);
     std::cout << "good to go!" << std::endl;
     return 0;    
