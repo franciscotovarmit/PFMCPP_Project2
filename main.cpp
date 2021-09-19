@@ -85,9 +85,7 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
  */
 int calculateVolume(int lenght =30, int wide = 20)
 {
-    ignoreUnused(lenght, wide); 
-    int vol = 0;
-    vol = lenght * wide * wide;
+    ignoreUnused(lenght, wide);
     return{};
 }
 /*
@@ -138,8 +136,6 @@ double getAmplification(double initialValue=1, double finalValue=100)
 int getNumberCables(int sources, int outputs= 30)
 {
     ignoreUnused(sources, outputs);
-    int cables = 0; 
-    cables = (outputs - sources)*2;
     return {};
 }
 
