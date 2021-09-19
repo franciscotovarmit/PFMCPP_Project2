@@ -58,11 +58,11 @@ void variableDeclarations()
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
     
- int a = 3, b = 4, c = 5;  FIXME: indentation
- double xx = 2.0, yy = 4.5, zz = 3.23; FIXME: indentation
- float  diam = 3.2f,  radius = 2.4f, lenght = 3.9f; FIXME: indentation
- char red = 'B', green = 'G', blue = 'B'; FIXME: indentation
- bool isRed = true, isNoRed = false, noColor = false; FIXME: indentation
+    int a = 3, b = 4, c = 5;
+    double xx = 2.0, yy = 4.5, zz = 3.23; 
+    float  diam = 3.2f,  radius = 2.4f, lenght = 3.9f; 
+    char red = 'B', green = 'G', blue = 'B'; 
+    bool isRed = true, isNoRed = false, noColor = false; 
    
     ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
 
@@ -85,18 +85,18 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
  */
 int calculateVolume(int lenght =30, int wide = 20)
 {
-        ignoreUnused(lenght, wide);  FIXME: indentation
-        int vol = 0; FIXME: indentation
-        vol = lenght * wide * wide; FIXME: indentation
-        return{}; FIXME: indentation
+    ignoreUnused(lenght, wide); 
+    int vol = 0;
+    vol = lenght * wide * wide;
+    return{};
 }
 /*
  2)
  */
 bool chooseInstrument(int playTime , int instrumentType = 0 )
 {
-        ignoreUnused(playTime, instrumentType); FIXME: indentation
-        return{}; FIXME: indentation
+    ignoreUnused(playTime, instrumentType);
+    return{};
 }
 
 /*
@@ -104,16 +104,16 @@ bool chooseInstrument(int playTime , int instrumentType = 0 )
  */
 float getTempo(float rhythym = 3.2f, int bars = 4)
 {
-        ignoreUnused(rhythym, bars); FIXME: indentation
-        return{}; FIXME: indentation
+    ignoreUnused(rhythym, bars);
+    return{};
 }
 /*
  4)
  */
 double calcTemperature(int type = 0, double degrees =36.0)
 {
-        ignoreUnused(type, degrees); FIXME: indentation
-        return{}; FIXME: indentation
+    ignoreUnused(type, degrees);
+    return{};
 }
 
 /*
@@ -121,26 +121,26 @@ double calcTemperature(int type = 0, double degrees =36.0)
  */
 bool solutionDone(double result = 0, int type = 1)
 {
-        ignoreUnused(result,type); FIXME: indentation
-        return{}; FIXME: indentation
+    ignoreUnused(result,type);
+    return{};
 }
 /*
  6)
  */
 double getAmplification(double initialValue=1, double finalValue=100)
 {
-        ignoreUnused(initialValue, finalValue); FIXME: indentation
-        return{}; FIXME: indentation
+    ignoreUnused(initialValue, finalValue);
+    return{};
 }
 /*
  7)
  */
 int getNumberCables(int sources, int outputs= 30)
 {
-        ignoreUnused(sources, outputs); FIXME: indentation
-        int cables = 0; FIXME: indentation
-        cables = (outputs - sources)*2; FIXME: indentation
-        return {}; FIXME: indentation
+    ignoreUnused(sources, outputs);
+    int cables = 0; 
+    cables = (outputs - sources)*2;
+    return {};
 }
 
 /*
