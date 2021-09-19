@@ -62,11 +62,11 @@ void variableDeclarations()
  double xx = 2.0, yy = 4.5, zz = 3.23;
  float  diam = 3.2f,  radius = 2.4f, lenght = 3.9f;
  char red = 'B', green = 'G', blue = 'B';
- bool isRed = true, isNoRed= false, noColor=false;
+ bool isRed = true, isNoRed = false, noColor = false;
    
     ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
 
-    ignoreUnused(a,b,c,xx,yy,zz,diam,radius,lenght,red,green,blue,isRed,isNoRed,noColor);
+    ignoreUnused(a, b, c, xx, yy, zz, diam, radius, lenght, red, green, blue, isRed, isNoRed, noColor);
 }
 
 /*
@@ -88,15 +88,15 @@ int calculateVolume(int lenght =30, int wide = 20)
         ignoreUnused(lenght, wide); 
         int vol = 0;
         vol = lenght * wide * wide;
-        return{vol};
+        return{};
 }
 /*
  2)
  */
 bool chooseInstrument(int playTime , int instrumentType = 0 )
 {
-            ignoreUnused(playTime, instrumentType);
-            return{};
+        ignoreUnused(playTime, instrumentType);
+        return{};
 }
 
 /*
@@ -104,16 +104,16 @@ bool chooseInstrument(int playTime , int instrumentType = 0 )
  */
 float getTempo(float rhythym = 3.2f, int bars = 4)
 {
-    ignoreUnused(rhythym, bars);
-    return{rhythym * bars};
+        ignoreUnused(rhythym, bars);
+        return{};
 }
 /*
  4)
  */
 double calcTemperature(int type = 0, double degrees =36.0)
 {
-    ignoreUnused(type, degrees);
-    return{};
+        ignoreUnused(type, degrees);
+        return{};
 }
 
 /*
@@ -121,26 +121,26 @@ double calcTemperature(int type = 0, double degrees =36.0)
  */
 bool solutionDone(double result = 0, int type = 1)
 {
-    ignoreUnused(result,type);
-    return{};
+        ignoreUnused(result,type);
+        return{};
 }
 /*
  6)
  */
 double getAmplification(double initialValue=1, double finalValue=100)
 {
-    ignoreUnused(initialValue, finalValue);
-    return{finalValue/initialValue};
+        ignoreUnused(initialValue, finalValue);
+        return{};
 }
 /*
  7)
  */
 int getNumberCables(int sources, int outputs= 30)
 {
-    ignoreUnused(sources, outputs);
-    int cables = 0;
-    cables = (outputs - sources)*2;
-    return {cables};
+        ignoreUnused(sources, outputs);
+        int cables = 0;
+        cables = (outputs - sources)*2;
+        return {};
 }
 
 /*
@@ -149,7 +149,7 @@ int getNumberCables(int sources, int outputs= 30)
 double setInitialGain(double noiseLevel, double intensity)
 {
     ignoreUnused(noiseLevel,intensity);
-    return{noiseLevel*intensity};
+    return{};
 }
 /*
  9)
@@ -157,7 +157,7 @@ double setInitialGain(double noiseLevel, double intensity)
 float calculateDistance(float initialPoint, float finalPoint)
 {
     ignoreUnused(initialPoint, finalPoint);
-    return{finalPoint-initialPoint};
+    return{};
 }
 /*
  10)
@@ -165,8 +165,7 @@ float calculateDistance(float initialPoint, float finalPoint)
 bool checkConsole(double voltage, double signal)
 {
     ignoreUnused(voltage,signal);
-    bool a = false;
-    return{a};
+    return{};
 }
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -197,7 +196,7 @@ int main()
     auto tempo = getTempo();
 
     //4)
-    auto calcTemperature();
+    auto temp = calcTemperature();
 
     //5)
     auto solution = solutionDone(1,2);
@@ -217,7 +216,7 @@ int main()
     //10)
     auto console = checkConsole(5.5, 3.3);
 
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, console,  solution, ampl, volume, cables, distance, gain, instrument,  temp, tempo);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
